@@ -1,6 +1,6 @@
 defmodule PasswordCheckerWithRaise do
   
-  @spec password_valid!(String.t) :: boolean
+  @spec password_valid!(String.t) :: String.t
   def password_valid!(p) when is_binary(p), do:  p |> password_long_enough! |> starts_with_letter!
   
   @spec password_long_enough!(String.t) :: String.t
